@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1 class="logo">My Portfolio</h1>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="https://www.linkedin.com/in/parth-mishra-b2b64a28a" target="_blank" class="contact-link">LinkedIn</a></li>
+                    <li><a href="{{ url_for('static', filename='resume.pdf') }}" target="_blank" class="contact-link">Resume</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="hero">
+            <div class="container">
+                <h1 class="hero-title">Welcome to My Portfolio</h1>
+                <p id="dynamicText"></p>
+                <a href="#details" class="btn">Learn More</a>
+            </div>
+        </div>
+    </header>
+    <section class="details" id="details">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p>A passionate tech enthusiast with a love for technology since the age of 12. With comprehensive skills in Python, Java, C, SQL, AI, cloud computing, and an in-depth understanding of web and computer networks, I am keen to bring my knowledge and enthusiasm in the field of AI Where i can grow and contribute to innovative projects. I am skilled in developing, training , and deploying machine learning models to solve real world problems . I have excellent analytical and problem-solving abilities, with a strong focus on continuous learning and improvement .</p>
+
+            <h2 class="section-title">Education</h2>
+            <p><strong>Bachelor of Technology in Computer Science and Engineering</strong><br>
+            Faculty of Engineering and Technology Gurukula Kangri (Deemed to be University), Haridwar, India<br>
+            Expected B.Tech: June 2026</p>
+            <p><strong>Key Courses:</strong> Data Structures and Algorithms, Operating Systems, Database Management Systems, Network Security, Artificial Intelligence</p>
+
+            <h2 class="section-title">Skills</h2>
+            <h3 class="subsection-title">Programming Languages:</h3>
+            <p> Python, Java, C<br>
+            HTML, CSS, JavaScript</p>
+
+            <h3 class="subsection-title">Data Analysis & Machine Learning:</h3>
+            <p><strong>Tools:</strong> NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, TensorFlow, PyTorch<br>
+            <strong>Techniques:</strong> Exploratory Data Analysis, Regression, Classification, Clustering, Deep Learning, Neural Networks, Natural Language Processing, Computer Vision<br>
+            <strong>Visualization:</strong> Crafting interactive and insightful visualizations with Matplotlib and Seaborn</p>
+
+            <h3 class="subsection-title">Web Development:</h3>
+            <p><strong>Frameworks:</strong> Flask , Django<br>
+            <strong>Databases:</strong> SQL (MySQL)</p>
+
+            <h3 class="subsection-title">Cloud Computing:</h3>
+            <p>AWS (EC2, S3, Lambda)</p>
+
+            <h3 class="subsection-title">Other Skills:</h3>
+            <p>Git, Docker</p>
+
+            <h2 class="section-title">Projects</h2>
+            <h3 class="subsection-title">Property Price Prediction Model</h3>
+            <p>This project involves developing a machine learning model to predict property prices based on various features such as location, property type, size, and amenities. The model is built using Python and scikit-learn, and it leverages techniques such as regression analysis. The project demonstrates my ability to handle complex datasets, perform feature engineering, and build predictive models.</p>
+            <a href="/model1" class="btn btn-project">View Project</a>
+
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 My Portfolio</p>
+            <p>Contact me at: <a href="mailto:mishraparth3@gmail.com">mishraparth3@gmail.com</a></p>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>

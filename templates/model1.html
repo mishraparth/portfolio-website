@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Property Price</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1 class="logo">My Portfolio</h1>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="https://www.linkedin.com/in/parth-mishra-b2b64a28a" target="_blank" class="contact-link">LinkedIn</a></li>
+                    <li><a href="{{ url_for('static', filename='resume.pdf') }}" target="_blank" class="contact-link">Resume</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Predict Property Price</h1>
+                <form method="POST" class="property-form">
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input type="text" id="state" name="state" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="locality">Locality</label>
+                        <input type="text" id="locality" name="locality" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="property_type">Property Type</label>
+                        <input type="text" id="property_type" name="property_type" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bhk">BHK</label>
+                        <input type="number" id="bhk" name="bhk" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="size_in_sqft">Size in SqFt</label>
+                        <input type="number" step="0.01" id="size_in_sqft" name="size_in_sqft" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="price_per_sqft">Price per SqFt</label>
+                        <input type="number" step="0.01" id="price_per_sqft" name="price_per_sqft" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="furnished_status">Furnished Status</label>
+                        <input type="text" id="furnished_status" name="furnished_status" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="floor_no">Floor No</label>
+                        <input type="number" id="floor_no" name="floor_no" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="total_floors">Total Floors</label>
+                        <input type="number" id="total_floors" name="total_floors" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age_of_property">Age of Property</label>
+                        <input type="number" id="age_of_property" name="age_of_property" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nearby_schools">Nearby Schools</label>
+                        <input type="number" id="nearby_schools" name="nearby_schools" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nearby_hospitals">Nearby Hospitals</label>
+                        <input type="number" id="nearby_hospitals" name="nearby_hospitals" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="public_transport_accessibility">Public Transport Accessibility</label>
+                        <input type="text" id="public_transport_accessibility" name="public_transport_accessibility" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="parking_space">Parking Space</label>
+                        <input type="text" id="parking_space" name="parking_space" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="security">Security</label>
+                        <input type="text" id="security" name="security" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="amenities">Amenities</label>
+                        <input type="text" id="amenities" name="amenities" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="facing">Facing</label>
+                        <input type="text" id="facing" name="facing" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="owner_type">Owner Type</label>
+                        <input type="text" id="owner_type" name="owner_type" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="availability_status">Availability Status</label>
+                        <input type="text" id="availability_status" name="availability_status" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Predict Price" class="btn">
+                    </div>
+                </form>
+                {% if prediction %}
+                    <h2 class="prediction">Predicted Price: {{ prediction }} Lakhs</h2>
+                {% endif %}
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 My Portfolio</p>
+            <p>Contact me at: <a href="mailto:mishraparth3@gmail.com">mishraparth3@gmail.com</a></p>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
