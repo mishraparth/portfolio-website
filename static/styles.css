@@ -1,0 +1,245 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+}
+
+nav {
+    background-color: #0056b3;
+    padding: 10px 0;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 0;
+    background: #fff;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #0056b3;
+}
+
+#dynamicText {
+    color: #333; /* Dark color for visibility */
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.main {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.property-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.property-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.property-form .form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.property-form .form-group input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.property-form .form-group input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.1);
+}
+
+.property-form .btn {
+    grid-column: span 2;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.property-form .btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.1);
+}
+
+.prediction {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+section.details .container {
+    margin-left: 40px; /* Adjust this value as needed */
+}
+
+/* Add this to your existing .btn styles if not present */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Add specific styles for the "View Project" button */
+.btn-project {
+    background-color: #ff9800; /* Change background color */
+    border: 2px solid #ff9800; /* Add border */
+    color: white; /* Text color */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1px; /* Letter spacing */
+}
+
+.btn-project:hover {
+    background-color: #e68900; /* Change hover background color */
+    border: 2px solid #e68900; /* Change hover border color */
+    color: #fff; /* Hover text color */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Add shadow on hover */
+    transform: translateY(-2px); /* Add hover transform */
+}
+
+.btn-project:active {
+    background-color: #cc7700; /* Change active background color */
+    border: 2px solid #cc7700; /* Change active border color */
+    transform: translateY(2px); /* Add active transform */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add active shadow */
+}
+
+.hero-title {
+    color: #007BFF; /* Change the text color */
+    font-size: 48px; /* Increase the font size */
+    font-weight: bold; /* Make the text bold */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2px; /* Letter spacing */
+    margin-bottom: 20px; /* Adjust the margin */
+}
+
+.section-title {
+    color: #007BFF; /* Set a primary color */
+    font-size: 32px; /* Set font size */
+    font-weight: bold; /* Make the text bold */
+    text-transform: uppercase; /* Uppercase text */
+    border-bottom: 2px solid #007BFF; /* Add an underline effect */
+    padding-bottom: 10px; /* Add some padding below */
+    margin-bottom: 20px; /* Add some margin below */
+    text-align: center; /* Center align the text */
+}
+
+.subsection-title {
+    color: #333; /* Set a darker color */
+    font-size: 24px; /* Set font size */
+    font-weight: bold; /* Make the text bold */
+    text-transform: uppercase; /* Uppercase text */
+    margin-bottom: 10px; /* Add some margin below */
+}
+
+
+
